@@ -10,4 +10,3 @@ Sinon je trouve que le reste est bien.
 
 Et aussi le seo serait pas top pour le chargement à cause des img.
 
-PS: Je n'ai rien oublié normalement.
