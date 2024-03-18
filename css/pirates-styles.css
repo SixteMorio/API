@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "PirateText";
+  src: url(../fonts/text/piecesOfEight.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PirateTitle";
+  src: url(../fonts/title/someWeatzWithSymbols.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  background-color: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 27%, rgba(31, 31, 31, 1) 100%);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-family: "PirateTitle";
+    font-size: 48px;
+    color: white;
+  }
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin: 10px;
+
+  .card {
+    font-family: "PirateText";
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 5px 5px grey;
+    background-image: url("../img/backGroundParchemin.jpeg");
+
+    .link {
+      color: black;
+      text-decoration: none;
+    }
+
+    .img {
+      width: 100%;
+      border-radius: 18px 18px 0px 0px;
+    }
+
+    .name {
+      font-size: 32px;
+      margin-left: 20%;
+    }
+
+    .othersName {
+      font-size: 24px;
+      margin-left: 5%;
+    }
+  }
+}
+
+.card:hover {
+  filter: brightness(75%);
+  transition-delay: 0.1s;
+}
+
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 1) 27%, rgba(31, 31, 31, 1) 100%);
+  padding: 20px;
+
+  .divUptdate {
+    margin-bottom: 20px;
+  }
+
+  .h2 {
+    font-family: "PirateTitle";
+    font-size: 36px;
+    color: white;
+  }
+
+  .source {
+    list-style-type: none;
+    list-style-image: url(../img/listItem.png);
+
+    .item {
+      font-family: "PirateText";
+      font-size: 25px;
+      color: white;
+      margin-left: 10%;
+    }
+  }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header .title {
+    font-size: 56px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header .title {
+    font-size: 72px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    padding-bottom: 10px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+
+    .divUptdate,
+    .divSource {
+      flex: 1;
+      padding: 10px;
+      margin-left: 300px;
+    }
+
+    .divSource {
+      .source {
+        .item {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "PirateText";
+  src: url(../fonts/text/piecesOfEight.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PirateTitle";
+  src: url(../fonts/title/someWeatzWithSymbols.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  background-color: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 27%, rgba(31, 31, 31, 1) 100%);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-family: "PirateTitle";
+    font-size: 48px;
+    color: white;
+  }
+
+}
+
+.main {
+  margin-bottom: 20px;
+
+  .divImg {
+    .img {
+      border-radius: 10px 10px 0px 0px;
+    }
+  }
+
+  .divText {
+    background-image: url("../img/backGroundParchemin.jpeg");
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 10px 10px;
+
+    .h1 {
+      font-family: "PirateTitle";
+      font-size: 62px;
+    }
+
+    .otherNames {
+      font-family: "PirateText";
+      font-size: 28px;
+    }
+
+    .bio {
+      font-size: 20px;
+    }
+
+    .btn {
+      border: 2px solid;
+    }
+
+    .btn {
+      border: 2px solid;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .btn:hover {
+      color: white;
+      background-color: black;
+      border-color: black;
+    }
+  }
+}
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 1) 27%, rgba(31, 31, 31, 1) 100%);
+  padding: 20px;
+
+  .divUptdate {
+    margin-bottom: 20px;
+  }
+
+  .h2 {
+    font-family: "PirateTitle";
+    font-size: 36px;
+    color: white;
+  }
+
+  .source {
+    list-style-type: none;
+    list-style-image: url(../img/listItem.png);
+
+    .item {
+      font-family: "PirateText";
+      font-size: 25px;
+      color: white;
+      margin-left: 10%;
+    }
+  }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header .title {
+    font-size: 56px;
+  }
+
+  .main {
+    .divImg {
+      .img {
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+
+    .divText {
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header .title {
+    font-size: 72px;
+  }
+
+  .main {
+    .divImg {
+      .img {
+        border-radius: 10px 0px 0px 10px;
+      }
+    }
+
+    .divText {
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+
+    .divUptdate,
+    .divSource {
+      flex: 1;
+      padding: 10px;
+      margin-left: 300px;
+    }
+
+    .divSource {
+      .source {
+        .item {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
